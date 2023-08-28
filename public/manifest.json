@@ -1,0 +1,7 @@
+{
+    "short_name": "React App",
+    "name": "Token Sniffer Widget Demo",
+    "icons": [],
+    "start_url": ".",
+    "display": "standalone"
+}
