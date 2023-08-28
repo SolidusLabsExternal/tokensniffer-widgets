@@ -20,7 +20,7 @@ npm i --save tokensniffer-widgets
 
 ## Using in a non-React project
 
-https://react.dev/learn/add-react-to-an-existing-project#step-2-render-react-components-anywhere-on-the-page
+See https://react.dev/learn/add-react-to-an-existing-project
 
 ## React Components
 
@@ -28,9 +28,9 @@ https://react.dev/learn/add-react-to-an-existing-project#step-2-render-react-com
 
 The ScoreBadge component displays the score of the token with a visual aid.
 
-![Screenshot of ScoreBadge component](score-badge.png)
+![Screenshot of ScoreBadge component](https://github.com/SolidusLabsExternal/tokensniffer-sdk/blob/main/score-badge.png)
 
-* `data`:  the full response from the Token Sniffer API [Get Token](https://tokensniffer.readme.io/reference/get-token-results) endpoint converted to a Javascript object.  One of the `include_metrics` and `include_tests` query parameters must be specified in the request URL.
+* `data`:  the full response from the Token Sniffer API [Get Token](https://tokensniffer.readme.io/reference/get-token-results) endpoint converted to a Javascript object.  One of the `include_metrics` and `include_tests` query parameters must be set in the request URL.
 
 * `theme`:  select "dark" or "light" predefined themes or pass a custom theme object.  See [themes.js](src/theme/themes.js) for example theme objects.
 
@@ -40,11 +40,11 @@ The ScoreBadge component displays the score of the token with a visual aid.
 
 The SmellTestResults component displays the full Smell Test results for a token as shown on tokensniffer.com.
 
-![Screenshot of SmellTestResults component](smell-test-results.png)
+![Screenshot of SmellTestResults component](https://github.com/SolidusLabsExternal/tokensniffer-sdk/blob/main/smell-test-results.png)
 
 #### Properties
 
-* `data`:  the full response from the Token Sniffer API [Get Token](https://tokensniffer.readme.io/reference/get-token-results) endpoint converted to a Javascript object.  Both the `include_metrics` and `include_tests` query parameters must be specified in the request URL.
+* `data`:  the full response from the Token Sniffer API [Get Token](https://tokensniffer.readme.io/reference/get-token-results) endpoint converted to a Javascript object.  Both the `include_metrics` and `include_tests` query parameters must be set in the request URL.
 
 * `theme`:  select "dark" or "light" predefined themes or pass a custom theme object.  See [themes.js](src/theme/themes.js) for example theme objects.
 
