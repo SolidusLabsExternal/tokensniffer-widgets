@@ -1,1 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.mask {
+    position: relative;
+    overflow: hidden;
+  
+    display: block;
+    width: 150px;
+    height: 75px;
+  }
+  
+  .semi-circle {
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 75px;
+  
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+  
+    &::before {
+      content: "";
+  
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      z-index: 2;
+  
+      display: block;
+      width: 105px;
+      height: 52.5px;
+      margin-left: -52.5px;
+  
+      background: #363636;
+  
+      border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+    }      
+  }
+  
+  .semi-circle--mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    width: 150px;
+    height: 150px;
+  
+    background: transparent;
+  
+    transform: rotate(120deg) translate3d(0,0,0);
+    transform-origin: center center;
+    backface-visibility: hidden;
+  
+    &::before {
+      content: "";
+  
+      position: absolute;
+      top: 0;
+      left: 0%;
+      z-index: 2;
+  
+      display: block;
+      width: 165px;
+      height: 80px;
+      margin: -3px 0 0 0;
+  
+      background: #e2e2e2;
+  
+      border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+    }      
+  }

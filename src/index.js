@@ -1,1 +1,2 @@
-export * from './components';
+export * from "./components/ScoreBadge";
+export * from "./components/SmellTestResults";
