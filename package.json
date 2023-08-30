@@ -8,8 +8,7 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "exports": "./dist/index.js",
   "scripts": {
     "build": "rollup -c",
     "start": "serve ./dist",
@@ -31,9 +30,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "dependencies": {
-    "@babel/polyfill": "^7.12.1"
   },
   "peerDependencies": {
     "react": ">=17.0.1",

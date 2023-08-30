@@ -1,2 +1,3 @@
-export * from "./components/ScoreBadge";
-export * from "./components/SmellTestResults";
+import ScoreBadge from "./components/ScoreBadge";
+import SmellTestResults from "./components/SmellTestResults";
+export { ScoreBadge, SmellTestResults }
