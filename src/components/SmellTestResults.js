@@ -1,9 +1,9 @@
 import React from "react";
 import CircledCheckIcon from "./CircledCheckIcon";
 import CircledXIcon from "./CircledXIcon";
-import Logo from "../Logo";
-import themes from "../../theme/themes";
-import '../../theme/global.css';
+import Logo from "./Logo";
+import themes from "../theme/themes";
+import '../theme/global.css';
 
 function precise(x) {
     if (x == 0)

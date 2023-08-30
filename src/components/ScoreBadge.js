@@ -1,7 +1,7 @@
 import React from "react";
-import Logo from "../Logo";
-import themes from "../../theme/themes";
-import './gauge.css';
+import Logo from "./Logo";
+import themes from "../theme/themes";
+import '../theme/global.css';
 
 const riskColor = (riskLevel) => {
     if (riskLevel == 'low')

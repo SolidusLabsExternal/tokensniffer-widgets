@@ -5,8 +5,15 @@
   "author": "Solidus Labs",
   "license": "MIT",
   "repository": "https://github.com/SolidusLabsExternal/tokensniffer-widgets",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files"
+    "build": "rollup -c",
+    "start": "serve ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "tokensniffer",
@@ -25,43 +32,21 @@
       "last 1 safari version"
     ]
   },
-  "babel": {
-    "presets": [
-      [
-        "@babel/env",
-        {
-          "targets": {
-            "edge": "17",
-            "firefox": "60",
-            "chrome": "67",
-            "safari": "11.1"
-          },
-          "useBuiltIns": "usage",
-          "corejs": "3.6.5"
-        }
-      ],
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      [
-        "inline-react-svg",
-        {
-          "svgo": false
-        }
-      ]
-    ]
-  },
   "dependencies": {
     "@babel/polyfill": "^7.12.1"
   },
+  "peerDependencies": {
+    "react": ">=17.0.1",
+    "react-dom": ">=17.0.1"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.22.10",
-    "@babel/core": "^7.22.11",
-    "@babel/preset-env": "^7.22.10",
-    "babel-cli": "^6.26.0",
-    "babel-plugin-inline-react-svg": "^2.0.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1"
+    "@babel/preset-react": "^7.22.5",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-replace": "^5.0.2",
+    "rollup": "^2.79.1",
+    "rollup-plugin-import-css": "^3.3.1",
+    "rollup-plugin-scss": "^4.0.0"
   }
 }
