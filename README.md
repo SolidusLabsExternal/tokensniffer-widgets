@@ -54,4 +54,4 @@ The SmellTestResults component displays the full Smell Test results for a token 
 
 ## Example
 
-See [demo.js](src/demo.js) for example code.
+See [demo.js](demo/index.js) for example code.
