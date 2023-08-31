@@ -4,7 +4,13 @@
   "description": "React components to render results from TokenSniffer API",
   "author": "Solidus Labs",
   "license": "MIT",
-  "repository": "https://github.com/SolidusLabsExternal/tokensniffer-widgets",
+  "bugs": {
+    "url": "https://github.com/SolidusLabsExternal/tokensniffer-widgets/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SolidusLabsExternal/tokensniffer-widgets.git"
+  },
   "files": [
     "dist"
   ],
