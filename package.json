@@ -1,6 +1,6 @@
 {
   "name": "tokensniffer-widgets",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "React components to render results from TokenSniffer API",
   "author": "Solidus Labs",
   "license": "MIT",
