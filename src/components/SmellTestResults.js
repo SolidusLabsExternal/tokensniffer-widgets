@@ -3,7 +3,6 @@ import CircledCheckIcon from "./CircledCheckIcon";
 import CircledXIcon from "./CircledXIcon";
 import Logo from "./Logo";
 import themes from "../theme/themes";
-import '../theme/global.css';
 
 function precise(x) {
     if (x == 0)
@@ -154,9 +153,11 @@ export default function SmellTestResults({ theme, width, showDetails, data }) {
                     <Logo /> Token Sniffer
                 </div>
             </div>
-            <div style={c.alert}>
-                <b>WARNING:</b> This token was flagged due to evidence of a bug, hack, or scam.
-            </div>
+            {data?.is_flagged &&
+                <div style={c.alert}>
+                    <b>WARNING:</b> This token was flagged due to evidence of a bug, hack, or scam.
+                </div>
+            }
             <div style={c.body}>
                 <div style={c.section}>
                     <div style={c.title}>
