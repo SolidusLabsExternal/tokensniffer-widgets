@@ -4181,7 +4181,8 @@ function ScoreBadge({
   if (typeof theme === 'object') t = theme;else t = themes["data"][theme];
   const c = classes$1(t, data);
   return /*#__PURE__*/React.createElement("div", {
-    style: c.container
+    style: c.container,
+    onClick: () => window.open(`https://tokensniffer.com/token/${data.chainId}/${data.address}`, "_blank")
   }, /*#__PURE__*/React.createElement(Gauge, {
     value: data.score,
     backgroundColor: "#e2e2e2",

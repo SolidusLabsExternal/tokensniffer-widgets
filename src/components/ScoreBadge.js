@@ -60,7 +60,7 @@ export default function ScoreBadge({ theme, data }) {
     const c = classes(t, data);
 
     return (
-        <div style={c.container}>
+        <div style={c.container} onClick={() => window.open(`https://tokensniffer.com/token/${data.chainId}/${data.address}`, "_blank")}>
             <Gauge value={data.score} backgroundColor="#e2e2e2" fillColor="#ffcd28" />
             <div style={c.score}>{data.score}</div>
             <div style={c.logo}>
