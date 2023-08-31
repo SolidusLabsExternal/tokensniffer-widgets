@@ -42,5 +42,9 @@
     "@rollup/plugin-replace": "^5.0.2",
     "rollup": "^2.79.1",
     "rollup-plugin-import-css": "^3.3.1"
+  },
+  "dependencies": {
+    "d3-scale": "^4.0.2",
+    "d3-shape": "^3.2.0"
   }
 }

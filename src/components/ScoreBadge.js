@@ -1,19 +1,18 @@
 import React from "react";
 import Logo from "./Logo";
+import Gauge from "./Gauge";
 import themes from "../theme/themes";
-import '../theme/global.css';
+import "../theme/global.css";
 
 const riskColor = (riskLevel) => {
     if (riskLevel == 'low')
-        return '#FFFFFF';
+        return '#ffffff';
     if (riskLevel == 'medium')
-        return '#FFCD26';
-    return '#F17059';
+        return '#ffcd26';
+    return '#f17059';
 }
 
 function classes(theme, data) {
-    const theta = Math.floor(data.score/100 * 179 + 1);
-
     return {
         container: {
             display: "flex",
@@ -31,19 +30,13 @@ function classes(theme, data) {
         },
         score: {
             position: "relative",
-            top: '-47px',
+            top: '-43px',
             textAlign: "center",
             height: 0,
             zIndex: 100,
             color: riskColor(data.riskLevel),
             fontWeight: "bold",
             fontSize: "42px"
-        },
-        semiCircle: {
-            background: "#ffcd28"
-        },
-        semiCircleMask: {
-            transform: `rotate(${theta} deg) translate3d(0,0,0)`
         }
     };
 };
@@ -68,13 +61,8 @@ export default function ScoreBadge({ theme, data }) {
 
     return (
         <div style={c.container}>
-            <div className="gauge">
-                <div className="mask">
-                    <div className="semi-circle" style={c.semiCircle}></div>
-                    <div className="semi-circle--mask" style={c.semiCircleMask}></div>
-                </div>
-                <div style={c.score}>{data.score}</div>
-            </div>
+            <Gauge value={data.score} backgroundColor="#e2e2e2" fillColor="#ffcd28" />
+            <div style={c.score}>{data.score}</div>
             <div style={c.logo}>
                 <Logo /> Token Sniffer
             </div>

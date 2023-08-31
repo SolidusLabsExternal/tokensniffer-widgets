@@ -20,12 +20,12 @@ export default {
             preventAssignment: false,
             'process.env.NODE_ENV': '"development"'
         }),
-        css()
+        css({ output: 'styles.css' }) 
     ],
     output: [
         { 
             file: 'dist/index.js',
-            format: 'cjs'
+            format: 'esm'
         },         
     ],
 };

@@ -3,6 +3,7 @@ import CircledCheckIcon from "./CircledCheckIcon";
 import CircledXIcon from "./CircledXIcon";
 import Logo from "./Logo";
 import themes from "../theme/themes";
+import "../theme/global.css";
 
 function precise(x) {
     if (x == 0)
@@ -29,9 +30,6 @@ function classes(theme, width) {
             backgroundColor: theme.colors.body, 
             cursor: "pointer",
             width: (typeof width !== "undefined" ? width : "20em"),
-        },
-        section: {
-            // display: "block",
         },
         row: {
             display: "flex",
@@ -159,7 +157,7 @@ export default function SmellTestResults({ theme, width, showDetails, data }) {
                 </div>
             }
             <div style={c.body}>
-                <div style={c.section}>
+                <div>
                     <div style={c.title}>
                         Swap Analysis
                     </div>
@@ -167,7 +165,7 @@ export default function SmellTestResults({ theme, width, showDetails, data }) {
                         <TestResult key={index} test={tests[id]} />
                     )}
                 </div>
-                <div style={c.section}>
+                <div>
                     <div style={c.title}>
                         Contract Analysis
                     </div>
@@ -193,7 +191,7 @@ export default function SmellTestResults({ theme, width, showDetails, data }) {
                     <TestResult test={tests["testForOwnershipNotRenounced"]} />
                     <TestResult test={tests["testForAuthorization"]} />
                 </div>
-                <div style={c.section}>
+                <div>
                     <div style={c.title}>
                         Holder Analysis
                     </div>
@@ -239,7 +237,7 @@ export default function SmellTestResults({ theme, width, showDetails, data }) {
                     <TestResult test={tests["testForHighCreatorTokenBalance"]} />
                     <TestResult test={tests["testForHighWalletTokenBalance"]} />
                 </div>
-                <div style={c.section}>
+                <div>
                     <div style={c.title}>
                         Liquidity Analysis
                     </div>
