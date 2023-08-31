@@ -1,3 +1,7 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 function getDefaultExportFromCjs (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
 }
@@ -4550,4 +4554,5 @@ function SmellTestResults({
   })))))));
 }
 
-export { ScoreBadge, SmellTestResults };
+exports.ScoreBadge = ScoreBadge;
+exports.SmellTestResults = SmellTestResults;
