@@ -64,7 +64,7 @@ export default function ScoreBadge({ theme, data }) {
             <Gauge value={data.score} backgroundColor="#e2e2e2" fillColor="#ffcd28" />
             <div style={c.score}>{data.score}</div>
             <div style={c.logo}>
-                <Logo /> Token Sniffer
+                <Logo fillColor={t.colors.textPrimary} highlightColor={t.colors.textHighlight} /> Token Sniffer
             </div>
         </div>
     );

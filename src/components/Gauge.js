@@ -32,12 +32,7 @@ export default function Gauge({ value=50, min=0, max=100, backgroundColor, fillC
   return (
       <svg style={{overflow: "visible"}}
         width="9em"
-        viewBox={[
-          -1, -1,
-          2, 1,
-        ].join(" ")}>
-        <defs>
-        </defs>
+        viewBox={[-1, -1, 2, 1].join(" ")}>
         <path
           d={backgroundArc}
           fill={backgroundColor}

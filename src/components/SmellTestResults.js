@@ -65,7 +65,7 @@ function classes(theme, width) {
             fontSize: "x-large"
         },
         score: {
-            fontWeight: "normal",
+            fontWeight: "bold",
             fontSize: "x-large",
             padding: 0
         },
@@ -148,7 +148,7 @@ export default function SmellTestResults({ theme, width, showDetails, data }) {
                     Score: <span style={{color: riskColor(data?.riskLevel), paddingLeft: "0.25em"}}>{data?.score}/100</span>
                 </div>
                 <div style={c.logo}>
-                    <Logo /> Token Sniffer
+                    <Logo fillColor={t.colors.textPrimary} highlightColor={t.colors.textHighlight} /> Token Sniffer
                 </div>
             </div>
             {data?.is_flagged &&
